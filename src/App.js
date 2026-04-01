@@ -33,8 +33,21 @@ export default function App() {
       <Toaster
         position="top-right"
         toastOptions={{
-          style: { fontFamily: 'Literata, serif', fontSize: '0.9rem' },
-          success: { iconTheme: { primary: '#2d6a3f', secondary: '#fff' } },
+          style: {
+            fontFamily: 'Tahoma, Arial, sans-serif',
+            fontSize: '0.82rem',
+            background: '#d4d0c8',
+            color: '#000',
+            border: '2px solid',
+            borderTopColor: '#ffffff',
+            borderLeftColor: '#ffffff',
+            borderRightColor: '#404040',
+            borderBottomColor: '#404040',
+            borderRadius: '0',
+            padding: '6px 12px',
+            boxShadow: '4px 4px 6px rgba(0,0,0,0.4)',
+          },
+          success: { iconTheme: { primary: '#008000', secondary: '#fff' } },
         }}
       />
 
@@ -73,7 +86,7 @@ export default function App() {
           <div className="nav-section" style={{ marginTop: 12 }}>Settings</div>
           <NavItem to="/rates"     icon={Settings}        label="Rates / দর" />
 
-          <div style={{ padding: '20px', marginTop: 'auto', fontSize: '0.72rem', color: 'rgba(255,255,255,0.3)', fontFamily: 'IBM Plex Mono, monospace' }}>
+          <div className="sidebar-footer">
             Deep Tube Well System<br />
             v1.0.0
           </div>

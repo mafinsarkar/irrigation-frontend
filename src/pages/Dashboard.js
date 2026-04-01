@@ -95,23 +95,23 @@ export default function Dashboard() {
 
       {/* Stats */}
       <div className="stats-grid">
-        <div className="stat-card green">
+        <div className="stat-card">
           <div className="stat-label">Total Farmers</div>
           <div className="stat-value">{stats.totalFarmers || 0}</div>
         </div>
-        <div className="stat-card amber">
+        <div className="stat-card">
           <div className="stat-label">Total Payable</div>
-          <div className="stat-value amber" style={{ fontSize: '1.3rem' }}>{fmt(stats.totalPayable)}</div>
+          <div className="stat-value amber" style={{ fontSize: '1.1rem' }}>{fmt(stats.totalPayable)}</div>
         </div>
-        <div className="stat-card green">
+        <div className="stat-card">
           <div className="stat-label">Total Collected</div>
-          <div className="stat-value green" style={{ fontSize: '1.3rem' }}>{fmt(stats.totalPaid)}</div>
+          <div className="stat-value green" style={{ fontSize: '1.1rem' }}>{fmt(stats.totalPaid)}</div>
         </div>
-        <div className="stat-card red">
+        <div className="stat-card">
           <div className="stat-label">Outstanding Due</div>
-          <div className="stat-value red" style={{ fontSize: '1.3rem' }}>{fmt(stats.totalBalance)}</div>
+          <div className="stat-value red" style={{ fontSize: '1.1rem' }}>{fmt(stats.totalBalance)}</div>
         </div>
-        <div className="stat-card ink">
+        <div className="stat-card">
           <div className="stat-label">Defaulters</div>
           <div className="stat-value">{stats.defaulterCount || 0}</div>
         </div>

@@ -92,12 +92,7 @@ export default function Rates() {
 
             {/* Preview */}
             {form.rate_per_bigha > 0 && (
-              <div style={{
-                background: 'var(--green-50)', border: '1px solid var(--green-200)',
-                borderRadius: 'var(--r-md)', padding: '12px 14px', marginBottom: 16,
-                fontSize: '0.82rem', fontFamily: 'IBM Plex Mono', color: 'var(--green-800)'
-              }}>
-                <Info size={13} style={{ display: 'inline', marginRight: 6 }} />
+              <div className="info-box" style={{ marginBottom: 10 }}>
                 10 Katha (0.5 bigha) = ₹{(0.5 * parseFloat(form.rate_per_bigha)).toLocaleString('en-IN')}<br />
                 20 Katha (1 bigha)   = ₹{(1   * parseFloat(form.rate_per_bigha)).toLocaleString('en-IN')}<br />
                 40 Katha (2 bigha)   = ₹{(2   * parseFloat(form.rate_per_bigha)).toLocaleString('en-IN')}
@@ -156,17 +151,15 @@ export default function Rates() {
         </div>
       </div>
 
-      {/* Info card */}
-      <div className="card" style={{ marginTop: 24, background: 'var(--surface-3)', border: '1px solid var(--border-light)' }}>
-        <div className="card-body" style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
-          <Info size={18} style={{ color: 'var(--green-600)', flexShrink: 0, marginTop: 2 }} />
-          <div style={{ fontSize: '0.88rem', color: 'var(--ink-muted)', lineHeight: 1.7 }}>
-            <strong style={{ color: 'var(--ink-soft)' }}>How billing works:</strong><br />
-            Cost = (Katha ÷ 20) × Rate per Bigha<br />
-            Total Payable = Borsha Cost + Boro Cost + Previous Year Due<br />
-            Balance = Total Payable − Total Paid<br /><br />
-            <strong style={{ color: 'var(--ink-soft)' }}>Seasons:</strong> Borsha = Rainy season irrigation · Boro = Dry season irrigation
-          </div>
+      <div className="card" style={{ marginTop: 10 }}>
+        <div className="card-header">
+          <h2 className="card-title"><Info size={13} style={{ display: 'inline', marginRight: 6 }} />How Billing Works</h2>
+        </div>
+        <div className="card-body info-box" style={{ border: 'none', margin: 0 }}>
+          Cost = (Katha ÷ 20) × Rate per Bigha<br />
+          Total Payable = Borsha Cost + Boro Cost + Previous Year Due<br />
+          Balance = Total Payable − Total Paid<br /><br />
+          <strong>Seasons:</strong> Borsha = Rainy season irrigation · Boro = Dry season irrigation
         </div>
       </div>
     </div>

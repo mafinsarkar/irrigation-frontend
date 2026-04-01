@@ -200,21 +200,17 @@ export default function Payments() {
             <div className="modal-body">
               {/* Live billing summary */}
               {billing && (
-                <div style={{
-                  background: 'var(--surface-3)', border: '1px solid var(--border-light)',
-                  borderRadius: 'var(--r-md)', padding: '14px 16px', marginBottom: 20,
-                  fontSize: '0.88rem', fontFamily: 'IBM Plex Mono'
-                }}>
-                  <div style={{ fontWeight: 700, marginBottom: 8, color: 'var(--green-800)' }}>
+                <div className="info-box" style={{ marginBottom: 12 }}>
+                  <div style={{ fontWeight: 700, marginBottom: 6, color: '#000' }}>
                     Current Billing — {form.year}
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6 }}>
-                    <span style={{ color: 'var(--ink-muted)' }}>Total Payable:</span>
-                    <span style={{ fontWeight: 600 }}>{fmt(billing.total_payable)}</span>
-                    <span style={{ color: 'var(--ink-muted)' }}>Already Paid:</span>
-                    <span style={{ color: 'var(--green-700)', fontWeight: 600 }}>{fmt(billing.total_paid)}</span>
-                    <span style={{ color: 'var(--ink-muted)' }}>Balance Due:</span>
-                    <span style={{ color: parseFloat(billing.balance) > 0 ? 'var(--red-600)' : 'var(--green-700)', fontWeight: 700 }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 4 }}>
+                    <span style={{ color: 'var(--win-text-gray)' }}>Total Payable:</span>
+                    <span style={{ fontWeight: 700 }}>{fmt(billing.total_payable)}</span>
+                    <span style={{ color: 'var(--win-text-gray)' }}>Already Paid:</span>
+                    <span style={{ color: 'var(--win-green)', fontWeight: 700 }}>{fmt(billing.total_paid)}</span>
+                    <span style={{ color: 'var(--win-text-gray)' }}>Balance Due:</span>
+                    <span style={{ color: parseFloat(billing.balance) > 0 ? 'var(--win-red)' : 'var(--win-green)', fontWeight: 700 }}>
                       {fmt(billing.balance)}
                     </span>
                   </div>
